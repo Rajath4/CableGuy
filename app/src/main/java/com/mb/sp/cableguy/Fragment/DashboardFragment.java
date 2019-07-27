@@ -21,6 +21,7 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DecimalFormat;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -129,15 +130,17 @@ public class DashboardFragment extends Fragment {
                 //Create json object of result string of json from api
                 JSONObject jsonobject = new JSONObject(result);
 
-                String pendingAmount = jsonobject.getString("pendingAmount");
-                String partialAmount = jsonobject.getString("partialAmount");
-                String collectedAmount = jsonobject.getString("collectedAmount");
-                String totalAmount = jsonobject.getString("totalAmount");
+                double pendingAmount = Double.parseDouble(jsonobject.getString("pendingAmount"));
+                double partialAmount = Double.parseDouble(jsonobject.getString("partialAmount"));
+                double collectedAmount = Double.parseDouble(jsonobject.getString("collectedAmount"));
+                double totalAmount = Double.parseDouble(jsonobject.getString("totalAmount"));
 
-                pendingAmoutTextView.setText(pendingAmount);
-                partialAmoutTextView.setText(partialAmount);
-                collectedAmoutTextView.setText(collectedAmount);
-                totalAmoutTextView.setText(totalAmount);
+                DecimalFormat formatter = new DecimalFormat("#,###.00");
+
+                pendingAmoutTextView.setText(formatter.format(pendingAmount));
+                partialAmoutTextView.setText(formatter.format(partialAmount));
+                collectedAmoutTextView.setText(formatter.format(collectedAmount));
+                totalAmoutTextView.setText(formatter.format(totalAmount));
 
 
 
