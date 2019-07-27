@@ -2,7 +2,8 @@
     <string name="app_name">Cable Guy</string>
     <string name="title_home">Home</string>
     <string name="title_collections">Collections</string>
-    <string name="title_notifications">Others</string>
+    <string name="title_others">Others</string>
+    <string name="title_notifications">Notifications</string>
 
     <string name="header_daily_report">Daily Report</string>
     <string name="header_monthly_report">Monthly Report</string>
@@ -14,5 +15,22 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Request for demo</string>
+
+
+    <!--Request For Demo -->
+    <string name="name">Name</string>
+    <string name="cable_network_name">Cable Network Name</string>
+<string name="Mobile">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="city">City</string>
+    <string name="language">Language</string>
+
+    <string name="requets_for_demo">Request For Demo</string>
 
 </resources>

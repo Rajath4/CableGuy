@@ -38,20 +38,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="2"
+        android:weightSum="4"
         android:padding="15sp"
         android:layout_gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="2"
-        android:orientation="horizontal">
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/pendingCard"
-            android:layout_width="0dp"
-            android:layout_height="200sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="5dp"
             app:strokeColor="#ff5252"
             app:strokeWidth="1dp"
@@ -91,7 +86,8 @@
                     android:textAllCaps="true"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:id="@+id/pendingAmoutTextView"/>
 
 
                 <LinearLayout
@@ -147,8 +143,8 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/partialCard"
-            android:layout_width="0dp"
-            android:layout_height="200sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="5dp"
             android:outlineAmbientShadowColor="#FFA726"
             app:cardBackgroundColor="#FFA726"
@@ -190,7 +186,8 @@
                     android:textAllCaps="true"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:id="@+id/partialAmountTextView"/>
 
 
                 <LinearLayout
@@ -243,19 +240,13 @@
                 android:layout_margin="20dp"
                 android:src="@drawable/ic_rupee_indian" />
         </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="2"
-        android:orientation="horizontal">
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/collectedAmount"
-            android:layout_width="220dp"
-            android:layout_height="200sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="5dp"
             app:cardBackgroundColor="#4CAF50"
             app:strokeColor="#4CAF50"
@@ -296,7 +287,8 @@
                     android:textAllCaps="true"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:id="@+id/collectedAMoutTextView"/>
 
 
                 <LinearLayout
@@ -351,17 +343,16 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
+
+       <com.google.android.material.card.MaterialCardView
             android:id="@+id/totalAmount"
-            android:layout_width="220dp"
-            android:layout_height="200sp"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="5dp"
             android:minHeight="150dp"
             app:strokeColor="#0190fd"
             app:strokeWidth="1dp"
-            android:layout_weight="1"
-            app:cardElevation="6dp">
+            android:layout_weight="1">
 
 
             <LinearLayout
@@ -395,7 +386,8 @@
                     android:textAllCaps="true"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:id="@+id/totalAmountTextView"/>
 
 
                 <LinearLayout
@@ -434,6 +426,5 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-    </LinearLayout>
     </LinearLayout>
        </LinearLayout>

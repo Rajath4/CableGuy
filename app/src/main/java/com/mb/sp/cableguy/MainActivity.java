@@ -27,10 +27,8 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.flContent, dashboardFragment);
                     fragmentTransaction.commit();
                     return true;
-                case R.id.navigation_dashboard:
 
-                    return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_others:
                     OthersFragment othersFragment = new OthersFragment();
                     FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction1.replace(R.id.flContent, othersFragment);
@@ -48,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        DashboardFragment dashboardFragment = new DashboardFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.flContent, dashboardFragment);
+        fragmentTransaction.commit();
     }
 
 }
